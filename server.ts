@@ -1,5 +1,9 @@
-import app from "./app";
-import logger from "./config/logger";
+// @typescript-eslint/no-unsafe-member-access
+// typescript-eslint/no-unsafe-call
+// @typescript-eslint/no-unsafe-return
+// @typescript-eslint/no-unsafe-member-access
+import app from "./src/app";
+import logger from "./src/config/logger";
 
 const startServer = () => {
     const PORT = 5502;
@@ -9,7 +13,7 @@ const startServer = () => {
         if (err instanceof Error) {
             logger.error(err.message);
             logger.on("finish", () => {
-                process.exit(1);
+                // process.exit(1);
             });
         }
     }
